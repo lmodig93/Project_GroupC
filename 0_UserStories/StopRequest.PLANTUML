@@ -1,0 +1,20 @@
+@startuml StopRequest
+start
+repeat
+repeat while (Stop request received) is (No);
+->Yes;
+fork
+    if(Engine ready to stop?) then (Yes)
+        :EngSt = Off;
+    else(No)
+        :EngSt = Previous state;
+    endif
+fork again
+    if(Gearbox ready to park?) then (Yes)
+        :GearBoxSt = Park;
+    else(No)
+        :GearBoxSt = Previous state;
+    endif
+end fork
+stop
+@enduml

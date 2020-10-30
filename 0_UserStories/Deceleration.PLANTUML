@@ -1,0 +1,7 @@
+@startuml Deceleration
+start
+repeat
+repeat while (Brake pedal pressed) is (no)
+->yes;
+:Decelerate;
+@enduml
