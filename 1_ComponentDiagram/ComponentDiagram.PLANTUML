@@ -1,0 +1,15 @@
+@startuml ComponentDiagram
+node "Vehicle"{
+    [User inputs]
+    [Vehicle signals]
+    [Receiver]
+}
+node "Engine"{
+}
+node "Gearbox"{   
+}
+Vehicle <-->  [CAN TxRx] : CAN
+[CAN TxRx] <--> Engine
+[CAN TxRx] <--> Gearbox
+Engine <-> Gearbox
+@enduml
