@@ -1,0 +1,10 @@
+@startuml Acceleration
+start
+repeat
+repeat while (Accelerator pedal pressed) is (no)
+->yes;
+if(Brake pedal pressed) then (yes)
+    :Decelerate;
+else (no)
+    :Accelerate;
+@enduml

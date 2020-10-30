@@ -5,9 +5,9 @@ repeat while (Start request received) is (No);
 ->Yes;
 fork
     if(Engine ready to start?) then (Yes)
-        :EngSt = Rdy;
+        :EngSt = On;
     else(No)
-        :EngSt = NotRdy;
+        :EngSt = Previous state;
     endif
 fork again
     if(Gearbox ready to start?) then (Yes)
@@ -17,9 +17,4 @@ fork again
     endif
 end fork
 stop
-
-
-
-
-
 @enduml
