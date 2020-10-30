@@ -1,0 +1,25 @@
+@startuml StartRequest
+start
+repeat
+repeat while (Start request received) is (No);
+->Yes;
+fork
+    if(Engine ready to start?) then (Yes)
+        :EngSt = Rdy;
+    else(No)
+        :EngSt = NotRdy;
+    endif
+fork again
+    if(Gearbox ready to start?) then (Yes)
+        :GearBoxSt = Rdy;
+    else(No)
+        :GearBoxSt = NotRdy;
+    endif
+end fork
+stop
+
+
+
+
+
+@enduml
