@@ -1,0 +1,12 @@
+@startuml
+
+(*) --> "Park signal"
+if then
+    -->[true] "Set gearbox state to park"
+    -right->(*)
+else
+    ->[false] "Keep Gearbox as it is"
+    -->[Ending process](*)
+endif
+
+@enduml

@@ -1,0 +1,13 @@
+@startuml
+
+(*) --> "Reverse signal"
+if  then
+    -->[true] "Set gearbox state to reverse"
+    -->"Change movement direction"
+    -right->(*)
+else
+    ->[false] "Keep Gearbox as it is"
+    -->[Ending process](*)
+endif
+
+@enduml
